@@ -1,0 +1,60 @@
+import java.util.Hashtable;
+
+/**
+ * @author josephvolpe
+ * Represents a phonebook of generic type T that represents how a person is represented.
+ * A person can be represented by name or SSN.
+ * @param <T>
+ */
+public class PhoneBook<T> {
+	
+	/** Represents the phonebook by a hashtable. The key is the person while the value is the phone number */
+	private Hashtable<T, Integer> book = new Hashtable<T, Integer>();
+	
+	/**
+	 * Looks up a person in the phonebook
+	 * @param person the person to find in the phone book
+	 * @return the phone number of the person or null if the person is not in the phonebook
+	 */
+	public Integer findPerson(T person) {
+		return book.get(person);
+	}
+	
+	/**
+	 * Adds a person to the phonebook
+	 * @param person the person to add
+	 * @param phoneNum the phomne number of the person
+	 * @return a boolean returning true whether the person was added or false if the
+	 * person was already in the phonebook and therefore the number was changed
+	 */
+	public boolean addPerson(T person, int phoneNum) {
+		if (!book.containsKey(person)) {
+			book.put(person, phoneNum);
+			return true;
+		}
+		else {
+			book.put(person, phoneNum);s
+			return false;
+		}
+		
+	}
+		
+	/**
+	 * Deletes the inputed person from the phonebook
+	 * @param person
+	 * @return boolean detailing if the person was deleted or not
+	 */
+	public boolean deletePerson(T person)  {
+		if (book.containsKey(person)) {
+			book.remove(person);
+			return true;
+		}
+		else
+			return false;
+ 	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

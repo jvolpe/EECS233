@@ -1,0 +1,19 @@
+INDEX VERSION 1.127+/Users/josephvolpe/Java/EECS233/.metadata/.plugins/org.eclipse.jdt.core
+883634178.index
+477636451.index
+473106283.index
+3669867886.index
+1880139076.index
+501142777.index
+3068211809.index
+1247459299.index
+347592456.index
+2936287081.index
+2654920010.index
+3746283354.index
+3740299137.index
+4124263567.index
+891561327.index
+1411263810.index
+2963788087.index
+505420999.index
