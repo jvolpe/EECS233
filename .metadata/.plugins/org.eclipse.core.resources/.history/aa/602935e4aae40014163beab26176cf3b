@@ -1,0 +1,20 @@
+/**
+ * HeapSort, MergeSort, QuickSort
+ * @author josephvolpe
+ *
+ */
+public class Sorting {
+
+	public static long heapSort(int[] arr) {
+		Heap heap = new Heap();
+		
+	}
+	
+	public static long mergeSort(int[] arr) {
+		
+	}
+	
+	public static long quickSort(int[] arr) {
+		
+	}
+}

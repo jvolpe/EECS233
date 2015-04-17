@@ -1,0 +1,50 @@
+/**
+ * Heap to be used for HeapSort
+ * @author josephvolpe
+ *
+ */
+public class Heap {
+
+	/** Array to represent the heap */
+	private int[] heap;
+	
+	private int maxItems;
+	
+	private int numItems;
+	
+	public void buildHeap(int size) {
+		heap = new int[size];
+		maxItems = size;
+		numItems = 0;
+	}
+	
+	public void heapify() {
+		
+	}
+	
+	public void siftDown(int i) {
+		int toSift = heap[i];
+		int parent = i;
+		int child = parent * 2 + 1;
+		while (child < numItems) {
+			if ((child + 1 < numItems) && (heap[child] < heap[child + 1])) 
+				child = child + 1;
+			if (toSift < child) {
+				heap[parent] = heap[child];
+				heap[child] = toSift;
+				parent = child;
+				child = parent * 2 + 1;
+			}
+		}
+		items[parent] = toSift;
+	}
+	
+	public int removeMax() {
+		int toRemove = heap[0];
+		heap[0] = items[numItems - 1];
+		numItems--;
+		siftDown(0);
+		return toRemove;
+	}
+	
+}

@@ -1,0 +1,18 @@
+/**
+ * Heap to be used with HeapSort
+ * @author josephvolpe
+ *
+ */
+public class Heap {
+	/** Array to represent the heap */
+	private int[] heap;
+	
+	private int maxItems;
+	
+	private int numItems;
+	
+	
+	public int getMaxItems() {
+		return maxItems;
+	}
+}

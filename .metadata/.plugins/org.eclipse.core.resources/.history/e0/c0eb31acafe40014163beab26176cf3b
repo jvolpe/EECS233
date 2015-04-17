@@ -1,0 +1,65 @@
+/**
+ * Heap to be used with HeapSort
+ * @author josephvolpe
+ *
+ */
+public class Heap {
+	
+	/** Array to represent the heap */
+	private int[] heap;
+	
+	/** Max number of items that the heap can hold */
+	private int maxItems;
+	
+	/** Current number of items in the heap */
+	private int numItems;
+	
+	/**
+	 * Create heap with input array
+	 * @param arr array to create heap with
+	 */
+	public Heap(int[] arr) {
+		heap = arr;
+		maxItems = arr.length;
+		numItems = arr.length;
+	}
+	
+	/**
+	 * Build a max on top heap
+	 */
+	public void buildMaxOnTopHeap() {
+		for (int i = numItems/2; i >= 0; i--) //for leaf nodes to root
+			maxHeapify(i);					 
+	}
+	
+	/**
+	 * Sifts down any node where the children are greater than it to be able to 
+	 * keep the principle of a max on top heap
+	 * @param i
+	 */
+	public void maxHeapify(int i) {
+		int toSift = heap[i];                //get value at root
+		int parent = i;						 //index of parent
+		int child = parent * 2 + 1;			 //index of 
+		while (child < numItems) {
+			if ((child + 1 < numItems) && (heap[child] < heap[child + 1]))
+				child = child + 1;
+			if (heap[parent] < heap[child]) {
+				heap[parent] = heap[child];
+				parent = child;
+				child = parent * 2 + 1;
+			}
+			else
+				break
+		}
+		heap[parent] = toSift;
+	}
+	
+	public int removeMax() {
+		int toRemove = heap[0];
+		heap[0] = heap[numItems - 1];
+		numItems--;
+		maxHeapify(0);
+		return toRemove;
+	}
+}

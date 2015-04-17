@@ -1,0 +1,34 @@
+/**
+ * HeapSort, MergeSort, QuickSort
+ * @author josephvolpe
+ *
+ */
+public class Sorting {
+
+	public static long heapSort(int[] arr) {
+		Heap heap = new Heap(arr);
+		heap.buildMaxOnTopHeap();
+		for (int i = arr.length - 1; i >= 0; i--) {
+			int num = heap.removeMax();
+			arr[i] = num;
+		}
+		
+		return l0.0; //running time
+	}
+	
+	//public static long mergeSort(int[] arr) {
+		
+	//}
+	
+	//public static long quickSort(int[] arr) {
+		
+	//}
+	
+	public static void main(String[] args) {
+		int[] toni = {4, 7, 2, 6, 8, 3, 9, 10, 24, 56, 36, 73, 6};
+		heapSort(toni);
+		for (int i = 0; i < toni.length; i++) {
+			System.out.println(toni[i]);
+		}
+	}
+}
