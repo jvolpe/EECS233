@@ -1,6 +1,5 @@
 # EECS233
-Projects from EECS233 Intro to Data Structures
-Assignments from EECS233 Intro to Data Structures, all written in Java using Eclipse. Assignments include small homework coding and some projects.
+Projects and assignments from EECS233 Intro to Data Structures, all written in Java using Eclipse. 
 
 
 Project 1 consists of making a list of numbers by using an ArrayList and a LinkedList.
@@ -15,3 +14,6 @@ encodings are.
 Project 3 consists of creating a HashTable using seperate chaining to keep track of unique words in an inputted file. 
 The word was used as the key and the word's respective frequency was used as the value. The words and their respective 
 frequencies were then written to an output file.
+
+
+Project 4 consists of sorting algorithms, specifically heapsort, mergesort, and quicksort.
