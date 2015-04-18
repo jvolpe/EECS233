@@ -34,13 +34,13 @@ public class Heap {
 	 * @param i
 	 */
 	public void maxHeapify(int i) {
-		int toSift = heap[i];                 //get value at root
+		int toSift = heap[i];                 //get value at index
 		int parent = i;						  //index of parent
 		int child = (2 * parent) + 1;	      //index of left child
 		while (child < numItems) {
 			if ((child + 1 < numItems) && (heap[child] < heap[child + 1]))
 				child = child + 1;            //makes sure to use greater child
-			if (heap[parent] < heap[child]) { //swap child with parent
+			if (heap[parent] < heap[child]) { //swap child with parent if need be
 				heap[parent] = heap[child];
 				heap[child] = toSift;
 				parent = child;
