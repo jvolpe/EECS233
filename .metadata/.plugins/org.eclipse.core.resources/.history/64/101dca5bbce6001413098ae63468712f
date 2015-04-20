@@ -1,0 +1,17 @@
+
+
+/**
+ * Test and research for an input file of a random array
+ * @author josephvolpe
+ *
+ */
+public class Reporting2 {
+
+	public static int[] readInputFile(String inputFile) {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

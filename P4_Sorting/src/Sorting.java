@@ -1,5 +1,5 @@
-import java.util.Random;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * HeapSort, QuickSort, QuickSort
@@ -11,7 +11,7 @@ public class Sorting {
 	/**
 	 * Sort an array using heapsort
 	 * @param arr array to sort
-	 * @return time to sort in miliseconds
+	 * @return time to sort in milliseconds
 	 */
 	public static long heapSort(int[] arr) {
 		long beginningTime = new Date().getTime();  //get current time
@@ -28,7 +28,7 @@ public class Sorting {
 	/**
 	 * Sort an array using quicksort
 	 * @param arr array to sort
-	 * @return time to sort in miliseconds
+	 * @return time to sort in milliseconds
 	 */
 	public static long quickSort(int[] arr) {
 		long beginningTime = new Date().getTime();  //get current time 
@@ -88,6 +88,7 @@ public class Sorting {
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}
+	
 	/**
 	 * Find the median of three int values
 	 * @param i first int
@@ -117,18 +118,66 @@ public class Sorting {
 			}
 		}
 	}
-	
+
 	/**
 	 * Sort an array using mergesort
 	 * @param arr array to sort
-	 * @return time to sort in miliseconds
+	 * @return time to sort in milliseconds
 	 */
 	public static long mergeSort(int[] arr) {
 		long beginningTime = new Date().getTime();
-		
-		
+		int[] tempArray = new int[arr.length];
+		//increase the size of each subarray by *2 for each loop iteration to 
+		//continue merging until there is only the entire array left
+		for (int subArraySize = 1; subArraySize < arr.length; subArraySize = 
+				subArraySize * 2) {
+			//For each subarray, merge with the next subarray.
+			//Works in subarrays that have a power of 2, but will still sort any
+			//leftover values that are not in a power of 2 subarray.
+			for (int i = 0; i < arr.length - subArraySize; i += subArraySize * 2) {
+				int left = i;
+				int mid = i + subArraySize - 1;
+				int end = Math.min(arr.length - 1, (subArraySize * 2) + i - 1);
+				merge(arr, tempArray, left, mid, end);
+			}
+		}
 		long endTime = new Date().getTime();
 		return endTime - beginningTime;
+	}
+	
+	/**
+	 * Merge two subarrays in an array
+	 * @param arr the array that has the two subarrays to merge
+	 * @param temp the temp array to be used to help merge the array
+	 * @param left the beginning index of the left subarray of mergeFrom
+	 * @param mid the end index of the left subarray of mergeFrom
+	 * @param end the last index of the right subarray of mergeFrom
+	 */
+	public static void merge(int[] arr, int[] temp, int left, 
+			int mid, int end) {
+		for (int k = left; k <= end; k++) {  //Copy from array to temp array
+            temp[k] = arr[k]; 
+        }
+		int i = left;                        //i is beginning of left subarray
+		int j = mid + 1;					 //j is beginning of right subarray
+		for (int k = left; k <= end; k++) {  //for the length of both subarrays
+			if (i > mid) {                   //if only right subarray is left
+				arr[k] = temp[j];   
+				j++;
+			}
+			else if (j > end) {				 //if only left subarray is left
+				arr[k] = temp[i];
+				i++;
+			}
+			else if (temp[i] < temp[j]) {    //if element at i is less
+				arr[k] = temp[i];
+				i++;
+			}
+			else {							 //if element at j is less
+				arr[k] = temp[j];
+				j++;
+			}
+		}
 	}
 	
 	/**
@@ -137,18 +186,18 @@ public class Sorting {
 	 */
 	public static void main(String[] args) {
 		Random r = new Random();
-		int[] toni = new int[1000000];
+		int[] toni = new int[10000000];
 		for (int i = 0; i < toni.length; i++) {
 			int n = r.nextInt();
 			if (n < 0)
 				n = n*-1;
-			n = n%10000;
+			n = n%1000000;
 			toni[i] = n;
 		}
-		long time = quickSort(toni);
-		for (int i = 0; i < toni.length; i++) {
+		long time = mergeSort(toni);
+		/**for (int i = 0; i < toni.length; i++) {
 			System.out.println(toni[i]);
-		}
+		}*/
 		System.out.println("Time: " + time);
 	}
 }

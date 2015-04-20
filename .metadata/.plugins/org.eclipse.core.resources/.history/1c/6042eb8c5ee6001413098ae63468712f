@@ -1,0 +1,134 @@
+import java.util.Random;
+
+/**
+ * Test and research on the sorting algorithms in the Sorting class
+ * @author josephvolpe
+ *
+ */
+public class Reporting1 {
+	
+	/**
+	 * Test heapsort's timing for an already sorted array
+	 * @param sizeOfArray size of the array
+	 * @return time in miliseconds to sort
+	 */
+	public static float testSortedHeapSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = i;
+		}
+		return Sorting.heapSort(testArray);
+	}
+	
+	/**
+	 * Test quicksort's timing for an already sorted array
+	 * @param sizeOfArray size of an array
+	 * @return time in miliseconds to sort
+	 */
+	public static float testSortedQuickSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = i;
+		}
+		return Sorting.quickSort(testArray);
+	}
+	
+	/**
+	 * Test mergesort's timing for an already sorted array
+	 * @param sizeOfArray size of an array
+	 * @return time in miliseconds to sort
+	 */
+	public static float testSortedMergeSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = i;
+		}
+		return 0; //Sorting.mergeSort(testArray);
+	}
+	
+	/**
+	 * Test heapsort's timing for a reverse sorted array
+	 * @param sizeOfArray size of an array
+	 * @return time in miliseconds to sort
+	 */
+	public static float testReverseHeapSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = sizeOfArray - 1; i >= 0; i--) {
+			testArray[(sizeOfArray - 1) - i] = i;
+		}
+		return Sorting.heapSort(testArray);
+	}
+	
+	/**
+	 * Test quicksort's timing for a reverse sorted array
+	 * @param sizeOfArray size of an array
+	 * @return time in miliseconds to sort
+	 */
+	public static float testReverseQuickSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = sizeOfArray - 1; i >= 0; i--) {
+			testArray[(sizeOfArray - 1) - i] = i;
+		}
+		return Sorting.quickSort(testArray);
+	}
+	
+	/**
+	 * Test mergesort's timing for a reverse sorted array
+	 * @param sizeOfArray size of an array
+	 * @return time in miliseconds to sort
+	 */
+	public static float testReverseMergeSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = sizeOfArray - 1; i >= 0; i--) {
+			testArray[(sizeOfArray - 1) - i] = i;
+		}
+		return 0; //Sorting.mergeSort(testArray);
+	}
+	
+	public static float testRandomHeapSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			int n = rand.nextInt();
+			if (n < 0)
+				n = n*-1;
+			n = n%sizeOfArray;
+			testArray[i] = n;
+		}
+		return Sorting.heapSort(testArray);
+	}
+	
+	public static float testRandomQuickSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			int n = rand.nextInt();
+			if (n < 0)
+				n = n*-1;
+			n = n%sizeOfArray;
+			testArray[i] = n;
+		}
+		return Sorting.quickSort(testArray);
+	}
+	
+	public static float testRandomMergeSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			int n = rand.nextInt();
+			if (n < 0)
+				n = n*-1;
+			n = n%sizeOfArray;
+			testArray[i] = n;
+		}
+		return 0; //Sorting.mergeSort(testingArray);
+	}
+	
+	/**
+	 * Main method
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,51 @@
+HeapSort  - Sorted Array  - 1000ints:      1ms
+HeapSort  - Sorted Array  - 10000ints:     1ms
+HeapSort  - Sorted Array  - 100000ints:    9ms
+HeapSort  - Sorted Array  - 1000000ints:  83ms
+QuickSort - Sorted Array  - 1000ints:      0ms
+QuickSort - Sorted Array  - 10000ints:     1ms
+QuickSort - Sorted Array  - 100000ints:    3ms
+QuickSort - Sorted Array  - 1000000ints:  22ms
+MergeSort - Sorted Array  - 1000ints:      0ms
+MergeSort - Sorted Array  - 10000ints:     2ms
+MergeSort - Sorted Array  - 100000ints:    6ms
+MergeSort - Sorted Array  - 1000000ints:  47ms
+
+HeapSort  - Reverse Array - 1000ints:      0ms
+HeapSort  - Reverse Array - 10000ints:     1ms
+HeapSort  - Reverse Array - 100000ints:    7ms
+HeapSort  - Reverse Array - 1000000ints:  82ms
+QuickSort - Reverse Array - 1000ints:      0ms
+QuickSort - Reverse Array - 10000ints:     0ms
+QuickSort - Reverse Array - 100000ints:    2ms
+QuickSort - Reverse Array - 1000000ints:  24ms
+MergeSort - Reverse Array - 1000ints:      0ms
+MergeSort - Reverse Array - 10000ints:     1ms
+MergeSort - Reverse Array - 100000ints:    3ms
+MergeSort - Reverse Array - 1000000ints:  55ms
+
+HeapSort  - Random Array  - 1000ints:     0.0ms
+HeapSort  - Random Array  - Variance for 1000ints:    0.0ms
+HeapSort  - Random Array  - 10000ints:    0.2ms
+HeapSort  - Random Array  - Variance for 10000ints:   0.13000001ms
+HeapSort  - Random Array  - 100000ints:   2.775ms
+HeapSort  - Random Array  - Variance for 100000ints:  17.44891ms
+HeapSort  - Random Array  - 1000000ints:  38.7ms
+HeapSort  - Random Array  - Variance for 1000000ints: 3377.093ms
+QuickSort - Random Array  - 1000ints:     0.05ms
+QuickSort - Random Array  - Variance for 1000ints:    0.045625ms
+QuickSort - Random Array  - 10000ints:    0.275ms
+QuickSort - Random Array  - Variance for 10000ints:   0.1926563ms
+QuickSort - Random Array  - 100000ints:   3.15ms
+QuickSort - Random Array  - Variance for 100000ints:  22.585627ms
+QuickSort - Random Array  - 1000000ints:  36.6ms
+QuickSort - Random Array  - Variance for 1000000ints: 3017.0698ms
+MergeSort - Random Array  - 1000ints:     0.05ms
+MergeSort - Random Array  - Variance for 1000ints:    0.045624997ms
+MergeSort - Random Array  - 10000ints:    0.225ms
+MergeSort - Random Array  - Variance for 10000ints:   0.13640624ms
+MergeSort - Random Array  - 100000ints:   2.575ms
+MergeSort - Random Array  - Variance for 100000ints:  15.021406ms
+MergeSort - Random Array  - 1000000ints:  32.85ms
+MergeSort - Random Array  - Variance for 1000000ints: 2429.2358ms
+

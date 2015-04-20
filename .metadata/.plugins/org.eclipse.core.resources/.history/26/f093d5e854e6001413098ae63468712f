@@ -1,0 +1,88 @@
+import java.util.Random;
+
+/**
+ * Test and research on the sorting algorithms in the Sorting class
+ * @author josephvolpe
+ *
+ */
+public class Reporting1 {
+	
+	public static float testSortedHeapSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = i;
+		}
+		return Sorting.heapSort(testArray);
+	}
+	
+	public static float testSortedQuickSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = i;
+		}
+		return Sorting.quickSort(testArray);
+	}
+	
+	public static float testSortedMergeSort(int sizeOfArray) {
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = i;
+		}
+		return 0; //Sorting.mergeSort(testArray);
+	}
+	
+	public static float test
+	
+	public static float testRandomHeapSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			int n = rand.nextInt();
+			if (n < 0)
+				n = n*-1;
+			n = n%sizeOfArray;
+			testArray[i] = n;
+		}
+		return Sorting.heapSort(testArray);
+	}
+	
+	public static float testRandomQuickSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			int n = rand.nextInt();
+			if (n < 0)
+				n = n*-1;
+			n = n%sizeOfArray;
+			testArray[i] = n;
+		}
+		return Sorting.quickSort(testArray);
+	}
+	
+	public static float testRandomMergeSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed));
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			int n = rand.nextInt();
+			if (n < 0)
+				n = n*-1;
+			n = n%sizeOfArray;
+			testArray[i] = n;
+		}
+		return 0; //Sorting.mergeSort(testingArray);
+	}
+	
+	/**
+	 * Main method
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		
+		for (int i = 0; i < toni.length; i++) {
+			System.out.println(toni[i]);
+		}
+		System.out.println("Time: " + time);
+	}
+}
