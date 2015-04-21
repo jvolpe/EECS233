@@ -4,7 +4,6 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
 
-
 /**
  * Test and research on the sorting algorithms in the Sorting class
  * @author josephvolpe
@@ -387,7 +386,6 @@ public class Reporting1 {
 					averageTime(randomMergeSortResults, 30) + "ns" + '\n');
 			writer.write("MergeSort - Random Array  - Variance for 1000000ints: " + 
 					variance(randomMergeSortResults, 30) + "ns" + '\n' + '\n');
-			
 			writer.close();
 		}
 		catch (IOException e) {
