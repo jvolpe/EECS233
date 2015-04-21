@@ -154,7 +154,7 @@ public class Reporting1 {
 	 */
 	public static float averageTime(float[] arr, int index) {
 		float total = 0f;
-		for (int i = index; i < index + 10 && i < arr.length; i++) {
+		for (int i = index; i < index + 10; i ++) {
 			total += arr[i];
 		}
 		return total / arr.length;
@@ -173,6 +173,7 @@ public class Reporting1 {
 			numerator += ((arr[i] - mean) * (arr[i] - mean));
 		}
 		return numerator / arr.length;
+		
 	}
 	
 	/**
@@ -225,27 +226,26 @@ public class Reporting1 {
 		/**
 		 * Test randomly generated arrays
 		 */
-		int seed = 0;
 		float[] randomHeapSortResults = new float[40];
 		index = 0;
 		for (int arraySize = 1000; arraySize <= 1000000; arraySize = arraySize*10) {
-			for (int i = 0; i < 10; i++, index++, seed++) 
-				randomHeapSortResults[index] = testRandomHeapSort(arraySize, seed);
+			for (int i = 0; i < 10; i++, index++) 
+				randomHeapSortResults[index] = testRandomHeapSort(arraySize, index);
 		}
 		float[] randomQuickSortResults = new float[40];
 		index = 0;
 		for (int arraySize = 1000; arraySize <= 1000000; arraySize = arraySize*10) {
-			for (int i = 0; i < 10; i++, index++, seed++) {
+			for (int i = 0; i < 10; i++, index++) {
 				randomQuickSortResults[index] 
-						= testRandomQuickSort(arraySize, seed);
+						= testRandomQuickSort(arraySize, index);
 			}
 		}
 		float[] randomMergeSortResults = new float[40];
 		index = 0;
 		for (int arraySize = 1000; arraySize <= 1000000; arraySize = arraySize*10) {
-			for (int i = 0; i < 10; i++, index++, seed++) {
+			for (int i = 0; i < 10; i++, index++) {
 				randomMergeSortResults[index] 
-						= testRandomMergeSort(arraySize, seed);
+						= testRandomMergeSort(arraySize, index);
 			}
 		}
 		/**

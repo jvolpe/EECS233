@@ -126,13 +126,13 @@ public class Sorting {
 	public static long mergeSort(int[] arr) {
 		long beginningTime = new Date().getTime();
 		int[] tempArray = new int[arr.length];
-		//increase the size of each subarray starting at size 1 by *2 for each loop 
-		//iteration to continue merging until there is only the entire array left
+		//increase the size of each subarray by *2 for each loop iteration to 
+		//continue merging until there is only the entire array left
 		for (int subArraySize = 1; subArraySize < arr.length; subArraySize = 
 				subArraySize * 2) {
 			//For each subarray, merge with the next subarray.
 			//Works in subarrays that have a power of 2, but will still sort any
-			//leftover values that are not in a subarray of power of 2.
+			//leftover values that are not in a power of 2 subarray.
 			for (int i = 0; i < arr.length - subArraySize; i += subArraySize * 2) {
 				int left = i;
 				int mid = i + subArraySize - 1;
