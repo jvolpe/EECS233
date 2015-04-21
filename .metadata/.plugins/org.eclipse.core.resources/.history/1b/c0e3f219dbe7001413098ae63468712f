@@ -1,3 +1,4 @@
+import java.util.Date;
 
 /**
  * HeapSort, QuickSort, MergeSort
@@ -9,28 +10,30 @@ public class Sorting {
 	/**
 	 * Sort an array using heapsort
 	 * @param arr array to sort
-	 * @return time to sort in nanoseconds
+	 * @return time to sort in milliseconds
 	 */
 	public static long heapSort(int[] arr) {
-		long beginningTime = System.nanoTime();     //get current time
+		long beginningTime = new Date().getTime();  //get current time
 		Heap heap = new Heap(arr);                  //create Heap with the array
 		heap.buildMaxOnTopHeap();					
 		for (int end = arr.length - 1; end >= 0; end--) {
 			int num = heap.removeMax();
 			arr[end] = num;
-		}        
-		return System.nanoTime() - beginningTime;   //calculate difference in time
+		}
+		long endTime = new Date().getTime();        //get time after sorting
+		return endTime - beginningTime;             //calculate difference in time
 	}
 	
 	/**
 	 * Sort an array using quicksort
 	 * @param arr array to sort
-	 * @return time to sort in nanoseconds
+	 * @return time to sort in milliseconds
 	 */
 	public static long quickSort(int[] arr) {
-		long beginningTime = System.nanoTime();     //get current time 
-		recursiveQuickSort(arr, 0, arr.length - 1);       
-		return System.nanoTime() - beginningTime;   //calculate difference in time
+		long beginningTime = new Date().getTime();  //get current time 
+		recursiveQuickSort(arr, 0, arr.length - 1);
+		long endTime = new Date().getTime();        //get time after sorting
+		return endTime - beginningTime;             //calculate difference in time
 	}
 	
 	/**
@@ -97,14 +100,20 @@ public class Sorting {
 			if (k <= i)
 				return i;
 			else {
-				return (j < k) ? j : k;
+				if (j < k)
+					return j;
+				else 
+					return k;
 			}
 		}
 		else {
 			if (k <= j)
 				return j;
 			else {
-				return (i < k) ? i : k;
+				if (i < k)
+					return i;
+				else 
+					return k;
 			}
 		}
 	}
@@ -112,10 +121,10 @@ public class Sorting {
 	/**
 	 * Sort an array using mergesort
 	 * @param arr array to sort
-	 * @return time to sort in nanoseconds
+	 * @return time to sort in milliseconds
 	 */
 	public static long mergeSort(int[] arr) {
-		long beginningTime = System.nanoTime();     //get current time
+		long beginningTime = new Date().getTime();
 		int[] tempArray = new int[arr.length];
 		//increase the size of each subarray starting at size 1 by *2 for each loop 
 		//iteration to continue merging until there is only the entire array left
@@ -131,7 +140,8 @@ public class Sorting {
 				merge(arr, tempArray, left, mid, end);
 			}
 		}
-		return System.nanoTime() - beginningTime;
+		long endTime = new Date().getTime();
+		return endTime - beginningTime;
 	}
 	
 	/**

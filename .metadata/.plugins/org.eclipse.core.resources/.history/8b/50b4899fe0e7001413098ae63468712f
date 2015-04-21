@@ -120,7 +120,7 @@ public class Reporting1 {
 			for (int i = 0; i < 10; i++, index++, seed++) {
 				//fill the array with different numbers each time by using a 
 				//different seed number each time
-				int[] testArray = fillRandomArray(arraySize, seed);
+				int[] testArray = fillRandomArray(sizeOfArray, seed);
 				times[index] = Sorting.heapSort(testArray);
 			}
 		}
@@ -156,7 +156,7 @@ public class Reporting1 {
 			for (int i = 0; i < 10; i++, index++, seed++) {
 				//fill the array with different numbers each time by using a 
 				//different seed number each time
-				int[] testArray = fillRandomArray(arraySize, seed);
+				int[] testArray = fillRandomArray(sizeOfArray, seed);
 				times[index] = Sorting.mergeSort(testArray);
 			}
 		}

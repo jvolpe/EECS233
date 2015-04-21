@@ -14,7 +14,8 @@ public class Reporting1 {
 	
 	/**
 	 * Test heapsort's timing for an already sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of the array
+	 * @return time in nanoseconds to sort
 	 */
 	public static float[] testSortedHeapSort() {
 		float[] times = new float[12];                 //array to hold times
@@ -30,7 +31,8 @@ public class Reporting1 {
 	
 	/**
 	 * Test quicksort's timing for an already sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @return time in nanoseconds to sort
 	 */
 	public static float[] testSortedQuickSort() {
 		float[] times = new float[12];                 //array to hold times
@@ -46,7 +48,8 @@ public class Reporting1 {
 	
 	/**
 	 * Test mergesort's timing for an already sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @return time in nanoseconds to sort
 	 */
 	public static float[] testSortedMergeSort() {
 		float[] times = new float[12];                 //array to hold times
@@ -63,10 +66,11 @@ public class Reporting1 {
 	
 	/**
 	 * Test heapsort's timing for a reverse sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @return time in nanoseconds to sort
 	 */
 	public static float[] testReverseHeapSort() {
-		float[] times = new float[12];                 //array to hold times
+		float[] times = new float[12];                  //array to hold times
 		for (int arraySize = 1000, index = 0; arraySize <= 1000000; 
 				arraySize = arraySize*10) {			   //test different size arrays
 			for (int i = 0; i < 3; i++, index++) {     //3 tests for each size
@@ -79,10 +83,11 @@ public class Reporting1 {
 	
 	/**
 	 * Test quicksort's timing for a reverse sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @return time in nanoseconds to sort
 	 */
 	public static float[] testReverseQuickSort() {
-		float[] times = new float[12];                 //array to hold times
+		float[] times = new float[12];                  //array to hold times
 		for (int arraySize = 1000, index = 0; arraySize <= 1000000; 
 				arraySize = arraySize*10) {			   //test different size arrays
 			for (int i = 0; i < 3; i++, index++) {     //3 tests for each size
@@ -95,10 +100,11 @@ public class Reporting1 {
 	
 	/**
 	 * Test mergesort's timing for a reverse sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @return time in nanoseconds to sort
 	 */
 	public static float[] testReverseMergeSort() {
-		float[] times = new float[12];                 //array to hold times
+		float[] times = new float[12];                  //array to hold times
 		for (int arraySize = 1000, index = 0; arraySize <= 1000000; 
 				arraySize = arraySize*10) {			   //test different size arrays
 			for (int i = 0; i < 3; i++, index++) {     //3 tests for each size
@@ -111,56 +117,47 @@ public class Reporting1 {
 	
 	/**
 	 * Test heapsort's timing for a randomly sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @param seed the seed number of the number generator
+	 * @return time in nanoseconds to sort
 	 */
-	public static float[] testRandomHeapSort() {
-		float[] times = new float[40];					//array to hold times	
-		for (int arraySize = 1000, index = 0, seed = 0; arraySize <= 1000000; 
-				arraySize = arraySize*10) {				//test different size arrays
-			for (int i = 0; i < 10; i++, index++, seed++) {
-				//fill the array with different numbers each time by using a 
-				//different seed number each time
-				int[] testArray = fillRandomArray(arraySize, seed);
-				times[index] = Sorting.heapSort(testArray);
-			}
+	public static float testRandomHeapSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = rand.nextInt();
 		}
-		return times;
+		return Sorting.heapSort(testArray);
 	}
 	
 	/**
 	 * Test quicksort's timing for a random sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @param seed the seed number of the number generator
+	 * @return time in nanoseconds to sort
 	 */
-	public static float[] testRandomQuickSort() {
-		float[] times = new float[40];					//array to hold times	
-		for (int arraySize = 1000, index = 0, seed = 0; arraySize <= 1000000; 
-				arraySize = arraySize*10) {				//test different size arrays
-			for (int i = 0; i < 10; i++, index++, seed++) {
-				//fill the array with different numbers each time by using a 
-				//different seed number each time
-				int[] testArray = fillRandomArray(arraySize, seed);
-				times[index] = Sorting.quickSort(testArray);
-			}
+	public static float testRandomQuickSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = rand.nextInt();
 		}
-		return times;
+		return Sorting.quickSort(testArray);
 	}
 	
 	/**
 	 * Test mergesort's timing for a randomly sorted array
-	 * @return array of times in nanoseconds to sort
+	 * @param sizeOfArray size of an array
+	 * @param seed the seed number of the number generator
+	 * @return time in nanoseconds to sort
 	 */
-	public static float[] testRandomMergeSort() {
-		float[] times = new float[40];					//array to hold times	
-		for (int arraySize = 1000, index = 0, seed = 0; arraySize <= 1000000; 
-				arraySize = arraySize*10) {				//test different size arrays
-			for (int i = 0; i < 10; i++, index++, seed++) {
-				//fill the array with different numbers each time by using a 
-				//different seed number each time
-				int[] testArray = fillRandomArray(arraySize, seed);
-				times[index] = Sorting.mergeSort(testArray);
-			}
+	public static float testRandomMergeSort(int sizeOfArray, int seed) {
+		Random rand = new Random(seed);
+		int[] testArray = new int[sizeOfArray];
+		for (int i = 0; i < sizeOfArray; i++) {
+			testArray[i] = rand.nextInt();
 		}
-		return times;
+		return Sorting.mergeSort(testArray);
 	}
 	
 	/**
@@ -177,7 +174,7 @@ public class Reporting1 {
 	}
 	
 	/**
-	 * Fill an array in reverse order to be used to test
+	 * Fills an array in reverse order to be used to test
 	 * @param arraySize the size of array to be created
 	 * @return the reverse order array
 	 */
@@ -185,20 +182,6 @@ public class Reporting1 {
 		int[] testArray = new int[arraySize];
 		for (int j = arraySize - 1; j >= 0; j--) {
 			testArray[(arraySize - 1) - j] = j; 
-		}
-		return testArray;
-	}
-	
-	/**
-	 * Fill an array in random order to be used to test
-	 * @param arraySize the size of array to be created
-	 * @return the random array
-	 */
-	public static int[] fillRandomArray(int arraySize, int seed) {
-		Random rand = new Random(seed);
-		int[] testArray = new int[arraySize];
-		for (int i = 0; i < arraySize; i++) {
-			testArray[i] = rand.nextInt();
 		}
 		return testArray;
 	}
@@ -224,7 +207,10 @@ public class Reporting1 {
 			if (k <= j)
 				return j;
 			else {
-				return (i < k) ? i : k;
+				if (i < k)
+					return i;
+				else 
+					return k;
 			}
 		}
 	}
@@ -271,10 +257,35 @@ public class Reporting1 {
 		float[] reverseHeapSortResults = testReverseHeapSort();
 		float[] reverseQuickSortResults = testReverseQuickSort();
 		float[] reverseMergeSortResults = testReverseMergeSort();
-		//Test randomly generated arrays
-		float[] randomHeapSortResults = testRandomHeapSort();
-		float[] randomQuickSortResults = testRandomQuickSort();
-		float[] randomMergeSortResults = testRandomMergeSort();
+		
+		
+		
+		/**
+		 * Test randomly generated arrays
+		 */
+		int seed = 0;
+		float[] randomHeapSortResults = new float[40];
+		index = 0;
+		for (int arraySize = 1000; arraySize <= 1000000; arraySize = arraySize*10) {
+			for (int i = 0; i < 10; i++, index++, seed++) 
+				randomHeapSortResults[index] = testRandomHeapSort(arraySize, seed);
+		}
+		float[] randomQuickSortResults = new float[40];
+		index = 0;
+		for (int arraySize = 1000; arraySize <= 1000000; arraySize = arraySize*10) {
+			for (int i = 0; i < 10; i++, index++, seed++) {
+				randomQuickSortResults[index] 
+						= testRandomQuickSort(arraySize, seed);
+			}
+		}
+		float[] randomMergeSortResults = new float[40];
+		index = 0;
+		for (int arraySize = 1000; arraySize <= 1000000; arraySize = arraySize*10) {
+			for (int i = 0; i < 10; i++, index++, seed++) {
+				randomMergeSortResults[index] 
+						= testRandomMergeSort(arraySize, seed);
+			}
+		}
 		/**
 		 * Write results to file
 		 */

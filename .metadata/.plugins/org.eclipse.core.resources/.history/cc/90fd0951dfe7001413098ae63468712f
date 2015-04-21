@@ -97,14 +97,20 @@ public class Sorting {
 			if (k <= i)
 				return i;
 			else {
-				return (j < k) ? j : k;
+				if (j < k)
+					return j;
+				else 
+					return k;
 			}
 		}
 		else {
 			if (k <= j)
 				return j;
 			else {
-				return (i < k) ? i : k;
+				if (i < k)
+					return i;
+				else 
+					return k;
 			}
 		}
 	}
