@@ -1,51 +1,79 @@
-HeapSort  - Sorted Array  - 1000ints:      156678.0ns
-HeapSort  - Sorted Array  - 10000ints:     2146304.0ns
-HeapSort  - Sorted Array  - 100000ints:    9595631.0ns
-HeapSort  - Sorted Array  - 1000000ints:  8.6641248E7ns
-QuickSort - Sorted Array  - 1000ints:      315076.0ns
-QuickSort - Sorted Array  - 10000ints:     1098743.0ns
-QuickSort - Sorted Array  - 100000ints:    2510725.0ns
-QuickSort - Sorted Array  - 1000000ints:  2.2974878E7ns
-MergeSort - Sorted Array  - 1000ints:      279505.0ns
-MergeSort - Sorted Array  - 10000ints:     1829104.0ns
-MergeSort - Sorted Array  - 100000ints:    4894295.0ns
-MergeSort - Sorted Array  - 1000000ints:  5.1564416E7ns
+Sorted Array - 1000 ints
+HeapSort  237133.0ns
+QuickSort 312306.0ns
+MergeSort 322536.0ns
 
-HeapSort  - Reverse Array - 1000ints:      54787.0ns
-HeapSort  - Reverse Array - 10000ints:     694025.0ns
-HeapSort  - Reverse Array - 100000ints:    8357484.0ns
-HeapSort  - Reverse Array - 1000000ints:  9.382968E7ns
-QuickSort - Reverse Array - 1000ints:      70017.0ns
-QuickSort - Reverse Array - 10000ints:     215800.0ns
-QuickSort - Reverse Array - 100000ints:    2488618.0ns
-QuickSort - Reverse Array - 1000000ints:  2.4448116E7ns
-MergeSort - Reverse Array - 1000ints:      31915.0ns
-MergeSort - Reverse Array - 10000ints:     385149.0ns
-MergeSort - Reverse Array - 100000ints:    3906898.0ns
-MergeSort - Reverse Array - 1000000ints:  5.3713548E7ns
+Sorted Array  - 10000 ints
+HeapSort  1003128.0ns
+QuickSort 1018518.0ns
+MergeSort 1864500.0ns
 
-HeapSort  - Random Array  - 1000ints:     18771.3ns
-HeapSort  - Random Array  - Variance for 1000ints:    8.3145946E8ns
-HeapSort  - Random Array  - 10000ints:    212558.38ns
-HeapSort  - Random Array  - Variance for 10000ints:   1.01658108E11ns
-HeapSort  - Random Array  - 100000ints:   2749662.5ns
-HeapSort  - Random Array  - Variance for 100000ints:  1.70124514E13ns
-HeapSort  - Random Array  - 1000000ints:  3.9087816E7ns
-HeapSort  - Random Array  - Variance for 1000000ints: 3.44861446E15ns
-QuickSort - Random Array  - 1000ints:     20454.2ns
-QuickSort - Random Array  - Variance for 1000ints:    9.487657E8ns
-QuickSort - Random Array  - 10000ints:    244185.03ns
-QuickSort - Random Array  - Variance for 10000ints:   1.34176358E11ns
-QuickSort - Random Array  - 100000ints:   2959543.8ns
-QuickSort - Random Array  - Variance for 100000ints:  1.97171421E13ns
-QuickSort - Random Array  - 1000000ints:  3.6026384E7ns
-QuickSort - Random Array  - Variance for 1000000ints: 2.92474442E15ns
-MergeSort - Random Array  - 1000ints:     17924.2ns
-MergeSort - Random Array  - Variance for 1000ints:    7.2345389E8ns
-MergeSort - Random Array  - 10000ints:    239996.25ns
-MergeSort - Random Array  - Variance for 10000ints:   1.46281628E11ns
-MergeSort - Random Array  - 100000ints:   2910293.0ns
-MergeSort - Random Array  - Variance for 100000ints:  1.94759738E13ns
-MergeSort - Random Array  - 1000000ints:  3.2513478E7ns
-MergeSort - Random Array  - Variance for 1000000ints: 2.38034845E15ns
+Sorted Array  - 100000 ints
+HeapSort  8928712.0ns
+QuickSort 2276683.0ns
+MergeSort 4605652.0ns
 
+Sorted Array  - 1000000 ints
+HeapSort  7.5920528E7ns
+QuickSort 2.1181786E7ns
+MergeSort 4.8179952E7ns
+
+Reverse Array - 1000 ints
+HeapSort  49203.0ns
+QuickSort 58884.0ns
+MergeSort 26791.0ns
+
+Reverse Array - 10000 ints
+HeapSort  573643.0ns
+QuickSort 181906.0ns
+MergeSort 325639.0ns
+
+Reverse Array - 100000 ints
+HeapSort  6768608.0ns
+QuickSort 2030042.0ns
+MergeSort 4060298.0ns
+
+Reverse Array - 1000000 ints
+HeapSort  7.8557824E7ns
+QuickSort 2.300912E7ns
+MergeSort 5.4556156E7ns
+
+Random Array  - 1000 ints
+HeapSort 16008.9ns
+QuickSort 20592.074ns
+MergeSort 19275.1ns
+
+Random Array  - Variance for 1000 ints
+HeapSort 5.7696294E8ns
+QuickSort 9.6124128E8ns
+MergeSort  8.3602816E8ns
+
+Random Array - 10000 ints
+HeapSort  207977.22ns
+QuickSort 243657.9ns
+MergeSort 227054.72ns
+
+Random Array  - Variance for 10000 ints
+HeapSort  9.7323991E10ns
+QuickSort 1.33584273E11ns
+MergeSort 1.17357019E11ns
+
+Random Array  - 100000 ints
+HeapSort  2802269.8ns
+QuickSort 2949400.8ns
+MergeSort 2659927.8ns
+
+Random Array  - Variance for 100000 ints
+HeapSort  1.78527656E13ns
+QuickSort 1.95795249E13ns
+MergeSort 1.60698466E13ns
+
+Random Array  - 1000000ints
+HeapSort  3.8891144E7ns
+QuickSort 3.6852428E7ns
+MergeSort 3.3031968E7ns
+
+Random Array  - Variance for 1000000ints
+HeapSort  3.41631658E15ns
+QuickSort 3.06091662E15ns
+MergeSort 2.45979837E15ns

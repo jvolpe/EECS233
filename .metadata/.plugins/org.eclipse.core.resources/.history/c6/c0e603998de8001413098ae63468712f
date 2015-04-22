@@ -105,14 +105,14 @@ public class Reporting2 {
 			}
 			writeOutputFile(array);
 			//First three are HS times so find median of those three
-			float hsMedianTime = Reporting1.median(times, 0);
+			float hsMedianTime = Reporting1.medianTime(times, 0);
 			//Next three are QS times so find median of those
-			float qsMedianTime = Reporting1.median(times, 3);
+			float qsMedianTime = Reporting1.medianTime(times, 3);
 			//Final three are MS times so find median of those
-			float msMedianTime = Reporting1.median(times, 6);
+			float msMedianTime = Reporting1.medianTime(times, 6);
 			//Print median times
 			System.out.println("HSjlv38 = " + hsMedianTime + "ns; QSjlv38 = " 
-					+ qsMedianTime + "ns; MSjlv38 = " +  msMedianTime + "ns");
+					+ qsMedianTime + "ns; MSjlv38 =" +  msMedianTime + "ns");
 		}
 		catch (FileNotFoundException e) {
 			System.out.println("File not Found");

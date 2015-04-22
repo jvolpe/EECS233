@@ -208,7 +208,7 @@ public class Reporting1 {
 	 * @param index the first index of a total of 3 values to find the median for
 	 * @return the median value
 	 */
-	public static float median(float[] arr, int index) {
+	public static float medianTime(float[] arr, int index) {
 		float i = arr[index];
 		float j = arr[index+ 1];
 		float k = arr[index + 2];
@@ -285,99 +285,111 @@ public class Reporting1 {
 			 * Writes sorted array results
 			 */
 			writer.write("Sorted Array - 1000 ints\n");
-			writer.write("HeapSort  " + median(sortedHeapSortResults, 0) + "ns\n");
-			writer.write("QuickSort " + median(sortedQuickSortResults, 0) + "ns\n");
-			writer.write("MergeSort " + median(sortedMergeSortResults, 0)+"ns\n\n");
+			writer.write("HeapSort  " + 
+						medianTime(sortedHeapSortResults, 0) + "ns" + '\n');
+			writer.write("QuickSort " + 
+					medianTime(sortedQuickSortResults, 0) + "ns" + '\n');
+			writer.write("MergeSort " + 
+					medianTime(sortedMergeSortResults, 0) + "ns" + '\n');
 			writer.write("Sorted Array  - 10000 ints\n");
-			writer.write("HeapSort  " + median(sortedHeapSortResults, 3) + "ns\n");
-			writer.write("QuickSort " + median(sortedQuickSortResults, 3) + "ns\n");
-			writer.write("MergeSort " + median(sortedMergeSortResults, 3)+"ns\n\n");
+			writer.write("HeapSort  " + 
+					medianTime(sortedHeapSortResults, 3) + "ns" + '\n');
+			writer.write("QuickSort " + 
+					medianTime(sortedQuickSortResults, 3) + "ns" + '\n');
+			writer.write("MergeSort " + 
+					medianTime(sortedMergeSortResults, 3) + "ns\n\n");
 			writer.write("Sorted Array  - 100000 ints\n");
-			writer.write("HeapSort  " + median(sortedHeapSortResults, 6) + "ns\n");
-			writer.write("QuickSort " + median(sortedQuickSortResults, 6) + "ns\n");
-			writer.write("MergeSort " + median(sortedMergeSortResults, 6)+"ns\n\n");
+			writer.write("HeapSort  " + 
+					medianTime(sortedHeapSortResults, 6) + "ns" + '\n');
+			writer.write("QuickSort " + 
+					medianTime(sortedQuickSortResults, 6) + "ns" + '\n');
+			writer.write("MergeSort " + 
+					medianTime(sortedMergeSortResults, 6) + "ns" + '\n');
 			writer.write("Sorted Array  - 1000000 ints\n");
-			writer.write("HeapSort  " + median(sortedHeapSortResults, 9) + "ns\n");
-			writer.write("QuickSort " + median(sortedQuickSortResults, 9) + "ns\n");
-			writer.write("MergeSort " + median(sortedMergeSortResults, 9)+"ns\n\n");
+			writer.write("HeapSort  " + 
+					medianTime(sortedHeapSortResults, 9) + "ns" + '\n');
+			writer.write("QuickSort " + 
+					medianTime(sortedQuickSortResults, 9) + "ns" + '\n');
+			writer.write("MergeSort " + 
+					medianTime(sortedMergeSortResults, 9) + "ns" + '\n' + '\n');
 			/**
 			 * Writes reverse array results
 			 */
-			writer.write("Reverse Array - 1000 ints\n");
-			writer.write("HeapSort  " + median(reverseHeapSortResults, 0) + "ns\n");
-			writer.write("QuickSort " + median(reverseQuickSortResults, 0)+"ns\n");
-			writer.write("MergeSort " + median(reverseMergeSortResults, 0)+"ns\n\n");
-			writer.write("Reverse Array - 10000 ints\n");
-			writer.write("HeapSort  " + median(reverseHeapSortResults, 3) + "ns\n");
-			writer.write("QuickSort " + median(reverseQuickSortResults, 3)+"ns\n");
-			writer.write("MergeSort " + median(reverseMergeSortResults, 3)+"ns\n\n");
-			writer.write("Reverse Array - 100000 ints\n");
-			writer.write("HeapSort  " + median(reverseHeapSortResults, 6) + "ns\n");
-			writer.write("QuickSort " + median(reverseQuickSortResults, 6)+"ns\n");
-			writer.write("MergeSort " + median(reverseMergeSortResults, 6)+"ns\n\n");
-			writer.write("Reverse Array - 1000000 ints\n");
-			writer.write("HeapSort  " + median(reverseHeapSortResults, 9) + "ns\n");
-			writer.write("QuickSort " + median(reverseQuickSortResults, 9)+"ns\n");
-			writer.write("MergeSort " + median(reverseMergeSortResults, 9)+"ns\n\n");
+			writer.write("HeapSort  - Reverse Array - 1000ints      " + 
+					medianTime(reverseHeapSortResults, 0) + "ns" + '\n');
+			writer.write("HeapSort  - Reverse Array - 10000ints     " + 
+					medianTime(reverseHeapSortResults, 3) + "ns" + '\n');
+			writer.write("HeapSort  - Reverse Array - 100000ints    " + 
+					medianTime(reverseHeapSortResults, 6) + "ns" + '\n');
+			writer.write("HeapSort  - Reverse Array - 1000000ints  " + 
+					medianTime(reverseHeapSortResults, 9) + "ns" + '\n');
+			writer.write("QuickSort - Reverse Array - 1000ints      " + 
+					medianTime(reverseQuickSortResults, 0) + "ns" +  '\n');
+			writer.write("QuickSort - Reverse Array - 10000ints     " + 
+					medianTime(reverseQuickSortResults, 3) + "ns" + '\n');
+			writer.write("QuickSort - Reverse Array - 100000ints    " + 
+					medianTime(reverseQuickSortResults, 6) + "ns" + '\n');
+			writer.write("QuickSort - Reverse Array - 1000000ints  " + 
+					medianTime(reverseQuickSortResults, 9) + "ns" + '\n');
+			writer.write("MergeSort - Reverse Array - 1000ints      " + 
+					medianTime(reverseMergeSortResults, 0) + "ns" + '\n');
+			writer.write("MergeSort - Reverse Array - 10000ints     " + 
+					medianTime(reverseMergeSortResults, 3) + "ns" + '\n');
+			writer.write("MergeSort - Reverse Array - 100000ints    " + 
+					medianTime(reverseMergeSortResults, 6) + "ns" + '\n');
+			writer.write("MergeSort - Reverse Array - 1000000ints  " + 
+					medianTime(reverseMergeSortResults, 9) + "ns" + '\n' + '\n');
 			/**
 			 * Writes random array average results and variances
 			 */
-			writer.write("Random Array  - 1000 ints\n");
-			writer.write("HeapSort " + 
-					averageTime(randomHeapSortResults, 0) + "ns\n");
-			writer.write("QuickSort " + 
-					averageTime(randomQuickSortResults, 0) + "ns\n");
-			writer.write("MergeSort " + 
-					averageTime(randomMergeSortResults, 0) + "ns\n\n");
-			writer.write("Random Array  - Variance for 1000 ints\n");
-			writer.write("HeapSort " + 
+			writer.write("HeapSort  - Random Array  - 1000ints     " + 
+					averageTime(randomHeapSortResults, 0) + "ns" + '\n');
+			writer.write("HeapSort  - Random Array  - Variance for 1000ints    " + 
 					variance(randomHeapSortResults, 0) + "ns" + '\n');
-			writer.write("QuickSort " + 
-					variance(randomQuickSortResults, 0) + "ns" +  '\n');
-			writer.write("MergeSort  " + 
-					variance(randomMergeSortResults, 0) + "ns\n\n");
-			writer.write("Random Array - 10000 ints\n");
-			writer.write("HeapSort  " + 
+			writer.write("HeapSort  - Random Array  - 10000ints    " + 
 					averageTime(randomHeapSortResults, 10) + "ns" + '\n');
-			writer.write("QuickSort " + 
-					averageTime(randomQuickSortResults, 10) + "ns" + '\n');
-			writer.write("MergeSort " + 
-					averageTime(randomMergeSortResults, 10) + "ns\n\n");
-			writer.write("Random Array  - Variance for 10000 ints\n");
-			writer.write("HeapSort  " + 
+			writer.write("HeapSort  - Random Array  - Variance for 10000ints   " + 
 					variance(randomHeapSortResults, 10) + "ns" + '\n');
-			writer.write("QuickSort " + 
-					variance(randomQuickSortResults, 10) + "ns" +  '\n');
-			writer.write("MergeSort " + 
-					variance(randomMergeSortResults, 10) + "ns\n\n");
-			writer.write("Random Array  - 100000 ints\n");
-			writer.write("HeapSort  " + 
+			writer.write("HeapSort  - Random Array  - 100000ints   " + 
 					averageTime(randomHeapSortResults, 20) + "ns" + '\n');
-			writer.write("QuickSort " + 
-					averageTime(randomQuickSortResults, 20) + "ns" + '\n');
-			writer.write("MergeSort " + 
-					averageTime(randomMergeSortResults, 20) + "ns\n\n");
-			writer.write("Random Array  - Variance for 100000 ints\n");
-			writer.write("HeapSort  " + 
+			writer.write("HeapSort  - Random Array  - Variance for 100000ints  " + 
 					variance(randomHeapSortResults, 20) + "ns" + '\n');
-			writer.write("QuickSort " + 
-					variance(randomQuickSortResults, 20) + "ns" +  '\n');
-			writer.write("MergeSort " + 
-					variance(randomMergeSortResults, 20) + "ns\n\n");
-			writer.write("Random Array  - 1000000ints\n");
-			writer.write("HeapSort  " + 
+			writer.write("HeapSort  - Random Array  - 1000000ints  " + 
 					averageTime(randomHeapSortResults, 30) + "ns" + '\n');
-			writer.write("QuickSort " + 
-					averageTime(randomQuickSortResults, 30) + "ns" + '\n');
-			writer.write("MergeSort " + 
-					averageTime(randomMergeSortResults, 30) + "ns\n\n");
-			writer.write("Random Array  - Variance for 1000000ints\n");
-			writer.write("HeapSort  " + 
+			writer.write("HeapSort  - Random Array  - Variance for 1000000ints " + 
 					variance(randomHeapSortResults, 30) + "ns" + '\n');
-			writer.write("QuickSort " + 
+			writer.write("QuickSort - Random Array  - 1000ints     " + 
+					averageTime(randomQuickSortResults, 0) + "ns" +  '\n');
+			writer.write("QuickSort - Random Array  - Variance for 1000ints    " + 
+					variance(randomQuickSortResults, 0) + "ns" +  '\n');
+			writer.write("QuickSort - Random Array  - 10000ints    " + 
+					averageTime(randomQuickSortResults, 10) + "ns" + '\n');
+			writer.write("QuickSort - Random Array  - Variance for 10000ints   " + 
+					variance(randomQuickSortResults, 10) + "ns" +  '\n');
+			writer.write("QuickSort - Random Array  - 100000ints   " + 
+					averageTime(randomQuickSortResults, 20) + "ns" + '\n');
+			writer.write("QuickSort - Random Array  - Variance for 100000ints  " + 
+					variance(randomQuickSortResults, 20) + "ns" +  '\n');
+			writer.write("QuickSort - Random Array  - 1000000ints  " + 
+					averageTime(randomQuickSortResults, 30) + "ns" + '\n');
+			writer.write("QuickSort - Random Array  - Variance for 1000000ints " + 
 					variance(randomQuickSortResults, 30) + "ns" +  '\n');
-			writer.write("MergeSort " + 
-					variance(randomMergeSortResults, 30) + "ns");
+			writer.write("MergeSort - Random Array  - 1000ints     " + 
+					averageTime(randomMergeSortResults, 0) + "ns" + '\n');
+			writer.write("MergeSort - Random Array  - Variance for 1000ints    " + 
+					variance(randomMergeSortResults, 0) + "ns" + '\n');
+			writer.write("MergeSort - Random Array  - 10000ints    " + 
+					averageTime(randomMergeSortResults, 10) + "ns" + '\n');
+			writer.write("MergeSort - Random Array  - Variance for 10000ints   " + 
+					variance(randomMergeSortResults, 10) + "ns" + '\n');
+			writer.write("MergeSort - Random Array  - 100000ints   " + 
+					averageTime(randomMergeSortResults, 20) + "ns" + '\n');
+			writer.write("MergeSort - Random Array  - Variance for 100000ints  " + 
+					variance(randomMergeSortResults, 20) + "ns" + '\n');
+			writer.write("MergeSort - Random Array  - 1000000ints  " + 
+					averageTime(randomMergeSortResults, 30) + "ns" + '\n');
+			writer.write("MergeSort - Random Array  - Variance for 1000000ints " + 
+					variance(randomMergeSortResults, 30) + "ns" + '\n' + '\n');
 			writer.close();
 		}
 		catch (IOException e) {

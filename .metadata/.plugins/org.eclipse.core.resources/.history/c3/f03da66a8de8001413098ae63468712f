@@ -322,7 +322,7 @@ public class Reporting1 {
 			/**
 			 * Writes random array average results and variances
 			 */
-			writer.write("Random Array  - 1000 ints\n");
+			writer.write("Random Array  - 1000 ints\n")
 			writer.write("HeapSort " + 
 					averageTime(randomHeapSortResults, 0) + "ns\n");
 			writer.write("QuickSort " + 
@@ -336,7 +336,7 @@ public class Reporting1 {
 					variance(randomQuickSortResults, 0) + "ns" +  '\n');
 			writer.write("MergeSort  " + 
 					variance(randomMergeSortResults, 0) + "ns\n\n");
-			writer.write("Random Array - 10000 ints\n");
+			writer.write("Random Array - 10000 ints\n")
 			writer.write("HeapSort  " + 
 					averageTime(randomHeapSortResults, 10) + "ns" + '\n');
 			writer.write("QuickSort " + 
@@ -371,7 +371,7 @@ public class Reporting1 {
 					averageTime(randomQuickSortResults, 30) + "ns" + '\n');
 			writer.write("MergeSort " + 
 					averageTime(randomMergeSortResults, 30) + "ns\n\n");
-			writer.write("Random Array  - Variance for 1000000ints\n");
+			writer.write("Random Array  - Variance for 1000000ints\n")
 			writer.write("HeapSort  " + 
 					variance(randomHeapSortResults, 30) + "ns" + '\n');
 			writer.write("QuickSort " + 

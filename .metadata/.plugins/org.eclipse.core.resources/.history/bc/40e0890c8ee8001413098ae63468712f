@@ -112,7 +112,7 @@ public class Reporting2 {
 			float msMedianTime = Reporting1.median(times, 6);
 			//Print median times
 			System.out.println("HSjlv38 = " + hsMedianTime + "ns; QSjlv38 = " 
-					+ qsMedianTime + "ns; MSjlv38 = " +  msMedianTime + "ns");
+					+ qsMedianTime + "ns; MSjlv38 =" +  msMedianTime + "ns");
 		}
 		catch (FileNotFoundException e) {
 			System.out.println("File not Found");

@@ -1,8 +1,0 @@
-/**
- * Heap to be used for HeapSort
- * @author josephvolpe
- *
- */
-public class Heap {
-
-}
