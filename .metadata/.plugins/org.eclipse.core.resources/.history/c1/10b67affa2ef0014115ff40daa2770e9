@@ -88,7 +88,7 @@ public class Reporting2 {
 	 */
 	public static void main(String[] args) {
 		try {
-			String inputFile = "/Users/josephvolpe/Downloads/test.txt";			//inputFile is first argument
+			String inputFile = new File("/Users/josephvolpe/Downloads/test.txt")			//inputFile is first argument
 			//create array that will have 9 times, 3 for each algorithm
 			float[] times = new float[9]; 		
 			int[][] array = readInputFile(inputFile);
