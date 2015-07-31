@@ -17,4 +17,4 @@ The word was used as the key and the word's respective frequency was used as the
 frequencies were then written to an output file.
 
 
-Project 4 consists of sorting algorithms, specifically heapsort, quicksort, and a bottom up/non-recurisve mergesort.
+Project 4 consists of sorting algorithms, specifically heapsort, quicksort, and mergesort.
