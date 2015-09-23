@@ -9,7 +9,7 @@ Project 2 consists of making a "HuffmanEncoder." This is not a true Huffman Enco
 The program uses Huffman encoding to read an inputted .txt file's characters, generate what the encoded values would look like 
 in binary by creating a Huffman tree, and then writing to an output file a string of 0's and 1's to represent what the 
 encodings are. 
-NOTE: This is currently not correct, the Huffman encoding should have characters at different encoding lengths, however as of rihgt now they are all equal.
+NOTE: This is currently not correct, the Huffman encoding should have characters at different encoding lengths, however as of right now they are all equal.
 
 
 Project 3 consists of creating a HashTable using seperate chaining to keep track of unique words in an inputted file. 
